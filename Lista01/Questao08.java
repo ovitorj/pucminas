@@ -2,13 +2,14 @@ import java.util.*;
 
 public class Questao08{
 
-   /*
+  /*
       Método na classe Pilha para limpar a pilha
-      
+         
       public void limpa(){
-      topo = null;
-      qtde = 0;
-      }
+         while(topo != null){
+            topo = topo.prox;
+            qtde--;
+          }
    */
 
    public static void main (String [] args){
@@ -22,5 +23,6 @@ public class Questao08{
       
       p.limpa();
       System.out.println(p.peek());
+      System.out.println(p.quantidade());
    }
 }
