@@ -1,5 +1,21 @@
 import java.util.*;
 
+/*
+
+public void insereAntesDe(Object elementoAInserir, Object elemento){
+      CCelula aux = primeira;
+      while (aux != null){
+         if (aux.prox.item == elemento){
+            aux.item = elementoAInserir;
+            
+         }   
+         
+         aux = aux.prox;
+      }
+   }
+
+*/
+
 public class questao01{
    
    /*
