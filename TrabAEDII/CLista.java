@@ -200,6 +200,54 @@ public class CLista {
          }
       }
    }
+   
+       
+   public void insereAntesDe(Object valorItem, Object elemento) {
+   
+      if (primeira != ultima) {
+         CCelula aux = primeira;
+         boolean achou = false;
+         while (aux.prox != null && !achou) {
+            achou = aux.prox.item.equals(elemento);
+            if (!achou)
+               aux = aux.prox;
+         } 
+         if (achou) {
+            aux.prox = new CCelula(valorItem, aux.prox);
+            qtde++;
+         } 
+      } 
+   }
+      
+      
+   public void insereDepoisDe(Object valorItem, Object elemento) {
+   
+      if (primeira != ultima) {
+         CCelula aux = primeira;
+         boolean achou = false;
+         while (aux.prox != null && !achou) {
+            achou = aux.prox.item.equals(elemento);
+            if (!achou)
+               aux = aux.prox;
+         } 
+         if (achou){
+            if(aux.prox.prox == null){
+               aux.prox.prox = new CCelula(valorItem);
+               ultima = ultima.prox; 
+            }
+            else{
+               aux.prox.prox = new CCelula(valorItem, aux.prox.prox);          
+            }
+            qtde++;
+         }
+      } 
+   } 
+   
+      
+   
+   
+
+   
 
    // Remove o elemento na posição passada como parâmetro.
    // O parâmetro "posicao" é a posição a ser removida. OBS: o primeiro elemento está na posição 1, e assim por diante.
